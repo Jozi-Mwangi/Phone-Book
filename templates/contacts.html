@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div>
+        <h1>List of Contacts</h1>
+    </div>
+
+    <div>
+        {% for contact in contacts %}
+            <div>
+                <h4>{{contact}}</h4>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

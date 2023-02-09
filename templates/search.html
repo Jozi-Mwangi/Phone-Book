@@ -1,0 +1,33 @@
+<div>
+    <h1>Search Page</h1>
+</div>
+<br/>
+
+<div>
+    <div>
+        <form action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
+            <input type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
+            <input type="submit" name="submit" value="search"/>
+        </form>
+    </div>
+</div>
+
+{%  if submitbutton == 'search' and request.GET.q != " " %}
+
+    {% if results %}
+    <h3>The results for <b>{{request.GET.q}}</b></h3>
+    <br/>
+
+    {% for result in results %}
+    
+    {{result.name}}
+ 
+    {% endfor %}
+
+    {% else %}
+
+    No result for your search Params
+    
+    {% endif %}
+
+{% endif %}
