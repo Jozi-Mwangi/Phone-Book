@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Contact, Person
 from django.db.models import Q
+from .forms import ContactForm
 
 # Create your views here.
-def index_view(request):
-    return render(request, 'index.html')
+def main_view(request):
+    return render(request, 'main.html')
 
 
 def contacts_view(request):
@@ -27,5 +28,41 @@ def search_view (request):
             return render (request, 'search.html')
             
     return render (request, 'search.html')
+
+def create_contact(request):
+    form = ContactForm()
+
+    if request.method == 'POST':
+        form =ContactForm(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.save()
+            return redirect ('main')
+        else:
+            print (form.errors)
+    
+    context ={'form':form}
+
+    return render (request, 'create_form.html', context)
+
+def update_contact(request, pk):
+    contact = Contact.objects.get(id=pk)
+    form = ContactForm(instance=contact)
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            form.save()
+            return redirect ('main')
+        else:
+            print (form.errors)
+
+    # if request.method == 'DELETE':
+    #     form = ContactForm(request.POST, instance=contact)
+    #     form.delete()
+    #     return redirect ('main')
+    
+    context = {'contact':contact, 'form':form}
+    return render(request, 'update_contact.html', context)
         
     

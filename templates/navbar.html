@@ -1,6 +1,14 @@
 <nav>
+    {% include 'search.html' %}
+    <!-- <div>
+        <a href="{% url 'main' %}">Home</a>
+    </div> -->
+
+    <!-- <div>
+        <a class="btn btn--warning" href="{% url 'search' %}">Search</a>
+    </div> -->
     <div>
-        <a href="{% url 'index' %}">Home</a>
+        <a class="btn" href="{% url 'create-contact' %}" > Create Contact</a>
     </div>
 
 </nav>

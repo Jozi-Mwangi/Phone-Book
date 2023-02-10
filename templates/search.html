@@ -1,16 +1,11 @@
-<div>
-    <h1>Search Page</h1>
-</div>
-<br/>
-
-<div>
+<header class="search-container">
     <div>
         <form action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
-            <input type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
+            <input class="form-input" type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
             <input type="submit" name="submit" value="search"/>
         </form>
     </div>
-</div>
+</header>
 
 {%  if submitbutton == 'search' and request.GET.q != " " %}
 

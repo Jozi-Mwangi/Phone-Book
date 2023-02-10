@@ -1,0 +1,10 @@
+<div>
+    <h3>Create Contact</h3>
+    <div>
+        <form method="POST" action="{% url 'create_contact' %}">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" >
+        </form>
+    </div>
+</div>

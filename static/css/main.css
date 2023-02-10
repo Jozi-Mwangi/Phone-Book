@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    color: black;
+    display: block;
+    margin: 10px;
+    width: fit-content;
+}
+.search-container {
+    height: 5rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-container form {
+    width: var(--view-width);
+    max-width: var(--max-width);
+    display: flex;
+    gap: 0.5rem;
+}
