@@ -1,10 +1,12 @@
-<header class="search-container">
-    <div>
+<header style="height: 4rem; background: white; display: flex; align-items: center;">
+    
+    <div style="gap: 0.5rem; flex-wrap: wrap;">
         <form action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
-            <input class="form-input" type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
-            <input type="submit" name="submit" value="search"/>
+            <input style="background: white; border-radius: 2mm;" type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
+            <input style="border-radius: 2mm; font-size: 0.75rem;" type="submit" name="submit" value="search"/>
         </form>
     </div>
+    
 </header>
 
 {%  if submitbutton == 'search' and request.GET.q != " " %}

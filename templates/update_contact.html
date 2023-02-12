@@ -1,7 +1,7 @@
 <div>
     <h3>Update Existing Contact</h3>
     <div>
-        <form method="POST" action="{% url 'update_contact' contact.id %}">
+        <form method="POST" action="{% url 'update-contact' contact.id %}">
             {% csrf_token %}
             {{form.as_p}}
             <input type="submit" >

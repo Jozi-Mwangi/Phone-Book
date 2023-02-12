@@ -1,14 +1,15 @@
 <nav>
     {% include 'search.html' %}
-    <!-- <div>
-        <a href="{% url 'main' %}">Home</a>
-    </div> -->
+   <div style="display: flex; gap: 3rem;">
 
-    <!-- <div>
-        <a class="btn btn--warning" href="{% url 'search' %}">Search</a>
-    </div> -->
-    <div>
-        <a class="btn" href="{% url 'create-contact' %}" > Create Contact</a>
-    </div>
+       <btn class="btn">
+           <a  href="{% url 'create-contact' %}" > Create Contact</a>
+       </btn>
+
+       <btn class="btn">
+           <a  href="{% url 'create-contact' %}" >  Update Contact</a>
+       </btn>
+
+   </div>
 
 </nav>
