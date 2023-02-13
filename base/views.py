@@ -83,5 +83,14 @@ def delete_contact(request, pk):
 def contact_view(request,pk):
     contact=Contact.objects.get(id=pk)
 
-    context={'contact':contact}
+    name = contact.name
+    phone_num = contact.phone_number
+    email = contact.email
+
+    context={
+        'contact':contact,
+        'name':name,
+        'phone_num':phone_num,
+        'email':email,
+    }
     return render (request, 'contacts.html', context)

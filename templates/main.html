@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
+    <link rel="stylesheet" href="static/css/main.css">
     
 </head>
 <body>
@@ -12,9 +13,13 @@
     <div class="container-main">
         {% block content %}
         {% for contact in contacts %}
-        <ul>
-            <li>{{contact.name}}</li>
-        </ul>
+       <div >
+           <ul>
+               <a href="{% url 'contact' contact.id %}">
+                   <li>{{contact.name}}</li>
+               </a>
+           </ul>
+       </div>
         {% endfor %}
 
         {% endblock %}

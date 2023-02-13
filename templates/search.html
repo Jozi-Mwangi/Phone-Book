@@ -1,9 +1,9 @@
-<header style="height: 4rem; background: white; display: flex; align-items: center;">
+<header class="search-container">
     
-    <div style="gap: 0.5rem; flex-wrap: wrap;">
-        <form action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
-            <input style="background: white; border-radius: 2mm;" type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
-            <input style="border-radius: 2mm; font-size: 0.75rem;" type="submit" name="submit" value="search"/>
+    <div class="search-container form">
+        <form action="{% url 'search' %}" method="GET" value="{{request.GET.q}}" class="form-input">
+            <input  type="text" placeholder="search" name="q" value="{{request.GET.q}}" >
+            <input  type="submit" name="submit" value="search"/>
         </form>
     </div>
     
