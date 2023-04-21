@@ -1,16 +1,27 @@
-{% include 'search.html' %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="static/css/main.css">
 
-{% block content %}
+    <header style="display: flex; align-items: center; gap: 10px; margin: 20px;" >
+        <a style=" background-color: aliceblue; text-decoration: none; cursor: pointer; padding:10px" href="{% url 'main' %}">
+            Back
+        </a>
+        {% include 'search.html' %}
+    </header>
+    
+    {% block content %}
+    
+    <link rel="stylesheet" href="static/css/main.css">
+        <div>
+                <div style="margin-left: 5px; font-family:Arial, Helvetica, sans-serif ;font-size: medium; color: brown; display: block;
+                    " >
+                    <h4>Name: {{contact.name}}</h4>
+                    <h4>Phone Number: {{contact.phone_number}}</h4>
+                    <h4>Email: {{contact.email}}</h4>
+                </div>
+        </div>
+    
+    {% endblock %}
+</html>
 
 
-    <div>
-        
-            <div>
-                <h4>{{contact.name}}</h4>
-                <h4>{{contact.phone_number}}</h4>
-                <h4>{{contact.email}}</h4>
-            </div>
-
-    </div>
-
-{% endblock %}

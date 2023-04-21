@@ -13,12 +13,14 @@
     <div class="container-main">
         {% block content %}
         {% for contact in contacts %}
-       <div >
-           <ul>
-               <a href="{% url 'contact' contact.id %}">
-                   <li>{{contact.name}}</li>
+       <div style="display: block; margin-left: 25px; width: 100px;" >
+           <ol>
+               <a style="text-decoration: none;" href="{% url 'contact' contact.id %}">
+                <div>
+                    {{contact.id}}. {{contact.name}}
+                </div>   
                </a>
-           </ul>
+           </ol>
        </div>
         {% endfor %}
 

@@ -6,9 +6,10 @@
 }
 
 .container-main {
-    width: 1200px;
-    margin: 0 auto;
-}
+    width: 700px;
+    margin: 0;
+    margin-top: 50px;
+}   
 
 .btn {
     padding: 10px 20px;
@@ -19,11 +20,13 @@
     display: block;
     margin: 10px;
     width: fit-content;
+    border: 1px;
 }
 .search-container {
     height: 5rem;
     background: white;
-    display: flex;
+    display: block;
+    margin-top: 50px;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -39,4 +42,12 @@
     border-radius: var(--borderRadius);
     background: white;
     border: 1px solid var(--grey-400);
+}
+
+.contacts-page-container {
+    margin-left: 5px;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: medium;
+    color: brown;
+    display: flex;
 }

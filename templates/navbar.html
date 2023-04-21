@@ -1,14 +1,15 @@
 <nav>
     {% include 'search.html' %}
    <div style="display: flex; gap: 3rem;">
-
-       <btn class="btn">
-           <a  href="{% url 'create-contact' %}" > Create Contact</a>
-       </btn>
-
-       <btn class="btn">
-           <a  href="{% url 'create-contact' %}" >  Update Contact</a>
-       </btn>
+        <div style="display: flex;" >
+            <btn class="btn">
+                <a  href="{% url 'create-contact' %}" > Create Contact</a>
+            </btn>
+     
+            <btn class="btn">
+                <a  href="{% url 'create-contact' %}" >  Update Contact</a>
+            </btn>
+        </div>
 
    </div>
 

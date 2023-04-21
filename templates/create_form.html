@@ -1,6 +1,6 @@
 <div>
     <h3>Create Contact</h3>
-    <div>
+    <div class="contact-container">
         <form method="POST" action="create-contact">
             {% csrf_token %}
             {{form.as_p}}
